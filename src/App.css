@@ -25,10 +25,11 @@ header a.active{
 .slick-dots li.slick-active button::before{
   background: #032b43 !important;
 }
-.events-container .heading , .speakers-container .heading{
+.events-container .heading , .speakers-container .heading , .event-details-container .heading{
   background-image:linear-gradient(to right , #7eceff68,#7eceff68), url(assets/background.jpg) ;
   background-repeat: no-repeat;
   background-size:auto;
   background-attachment: fixed;
   background-position: bottom;
+  /* color: #ffffffd7; */
 }
