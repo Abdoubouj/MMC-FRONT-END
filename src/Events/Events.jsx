@@ -9,12 +9,32 @@ const Events = () => {
     <div className='events-container'>
         {showFilters &&
         <div className="h-screen z-0 fixed top-0 left-0 w-full before:fixed before:content-[''] before:w-full before:h-full before:bg-slate-900 before:opacity-25 before:top-0 before:left-0">
-            <div className='filters-box fixed top-0 left-0 h-full w-[300px] opacity-100 z-20 bg-white'>
-            <div className="flex justify-end p-3">
+         <div className='filters-box fixed top-0 left-0 h-full w-[350px] opacity-100 z-20 bg-white'>
+            <div className="flex justify-between items-center p-3">
+                <h2 className='text-[20px] text-primary'>Filters</h2>
             <button className='text-[20px] text-primary' onClick={()=>{setShowFilters(false)}}>
                <TfiClose/>
             </button>
             </div>
+            <form className='w-full p-3'>
+                <div className="mb-4 flex flex-col gap-2">
+                    <label className='font-semibold text-third capitalize' htmlFor="from">From</label>
+                    <input type="date" name="from" className='border-[1px] border-primary p-3'/>
+                </div>
+                <div className="mb-4 flex flex-col gap-2">
+                    <label className='font-semibold text-third capitalize' htmlFor="to">to</label>
+                    <input type="date" name="to" className='border-[1px] border-primary p-3'/>
+                </div>
+                <div className="mb-4 flex flex-col gap-2">
+                    <label className='font-semibold text-third capitalize' htmlFor="city">city</label>
+                    <select name="city" className='border-[1px] border-primary p-3'>
+                       <option value="rabat">rabat</option>
+                       <option value="rabat">rabat</option>
+                       <option value="rabat">rabat</option>
+                       <option value="rabat">rabat</option>
+                    </select>
+                </div>
+            </form>
         </div>
         </div>
         }

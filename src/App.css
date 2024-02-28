@@ -18,7 +18,7 @@
   background: #8f8f8f !important;
 }
 .slick-dots li.slick-active button::before{
-  background: dodgerblue !important;
+  background: #032b43 !important;
 }
 .events-container .heading{
   background-image:linear-gradient(to right , #7eceff68,#7eceff68), url(assets/background.jpg) ;
