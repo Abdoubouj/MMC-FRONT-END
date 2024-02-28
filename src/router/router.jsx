@@ -3,12 +3,14 @@ import Home from "../Home/Home";
 import UserLayout from "../UserLayout/UserLayout";
 import Events from "../Events/Events";
 import Speakers from "../Speakers/Speakers";
+import Login from "../Login/Login";
 
 export const router = createBrowserRouter([
     {path:"/",element:<UserLayout/>,children:[
         {path:"" , element:<Home/>},
         {path:"Events" , element:<Events/>},
         {path:"Speakers" , element:<Speakers/>},
-    ]}
+    ]},
+    {path:"/Login" , element:<Login/>}
 ]
 )

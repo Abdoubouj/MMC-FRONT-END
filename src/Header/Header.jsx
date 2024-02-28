@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from "../assets/Logo.svg"
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 const Header = () => {
   return (
     <header className='header h-[100px] bg-primary flex items-center justify-center'>
@@ -18,7 +18,7 @@ const Header = () => {
             </ul>
         </div>
         <div className="authentification">
-            <a href="" className='px-7 py-3 bg-third text-white capitalize font-bold'>sign in</a>
+            <Link to="/Login" className='px-7 py-3 bg-third text-white capitalize font-bold'>sign in</Link>
         </div>
         </div>
     </header>
