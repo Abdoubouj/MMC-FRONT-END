@@ -1,14 +1,10 @@
+import { RouterProvider } from 'react-router-dom';
 import './App.css'
+import { router } from './router/router';
 function App() {
   return (
-    <div className='text-slate-700'>
-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti nulla ea optio aspernatur quae facere consequatur placeat nam reprehenderit voluptatibus. Ipsum dolore voluptatibus laborum dolor quia cupiditate aliquid, repellendus voluptate!</p>
-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti nulla ea optio aspernatur quae facere consequatur placeat nam reprehenderit voluptatibus. Ipsum dolore voluptatibus laborum dolor quia cupiditate aliquid, repellendus voluptate!</p>
-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti nulla ea optio aspernatur quae facere consequatur placeat nam reprehenderit voluptatibus. Ipsum dolore voluptatibus laborum dolor quia cupiditate aliquid, repellendus voluptate!</p>
-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti nulla ea optio aspernatur quae facere consequatur placeat nam reprehenderit voluptatibus. Ipsum dolore voluptatibus laborum dolor quia cupiditate aliquid, repellendus voluptate!</p>
-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti nulla ea optio aspernatur quae facere consequatur placeat nam reprehenderit voluptatibus. Ipsum dolore voluptatibus laborum dolor quia cupiditate aliquid, repellendus voluptate!</p>
-       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti nulla ea optio aspernatur quae facere consequatur placeat nam reprehenderit voluptatibus. Ipsum dolore voluptatibus laborum dolor quia cupiditate aliquid, repellendus voluptate!</p>
-    </div>
+   <RouterProvider router={router}>
+   </RouterProvider>
   )
 }
 
