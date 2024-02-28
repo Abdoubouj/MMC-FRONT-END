@@ -5,6 +5,11 @@
   box-sizing:border-box ;
   font-family: "Dosis";
 }
+header a.active{
+  color: #0b5f94;
+  font-weight: 800;
+  border-bottom: 2px solid #0b5f94;
+}
 .upcoming_event_section{
   clip-path: polygon(50% 5%, 66% 0, 100% 0, 100% 100%, 0 100%, 0 0, 34% 0);
 }
@@ -20,7 +25,7 @@
 .slick-dots li.slick-active button::before{
   background: #032b43 !important;
 }
-.events-container .heading{
+.events-container .heading , .speakers-container .heading{
   background-image:linear-gradient(to right , #7eceff68,#7eceff68), url(assets/background.jpg) ;
   background-repeat: no-repeat;
   background-size:auto;

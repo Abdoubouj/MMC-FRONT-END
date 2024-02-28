@@ -11,10 +11,10 @@ const Header = () => {
         <div className="header-menu">
             <ul className='flex gap-4 items-center'>
                 <li><NavLink className='text-white capitalize tracking-wide font-medium inline-block px-3 py-2' to="/">home</NavLink></li>
-                <li><NavLink className='text-white capitalize tracking-wide font-medium inline-block px-3 py-2' to="/events">events</NavLink></li>
-                <li><NavLink className='text-white capitalize tracking-wide font-medium inline-block px-3 py-2' to="/">speakers</NavLink></li>
-                <li><NavLink className='text-white capitalize tracking-wide font-medium inline-block px-3 py-2' to="/">about us</NavLink></li>
-                <li><NavLink className='text-white capitalize tracking-wide font-medium inline-block px-3 py-2' to="/">contact us</NavLink></li>
+                <li><NavLink className='text-white capitalize tracking-wide font-medium inline-block px-3 py-2' to="/Events">events</NavLink></li>
+                <li><NavLink className='text-white capitalize tracking-wide font-medium inline-block px-3 py-2' to="/Speakers">speakers</NavLink></li>
+                <li><NavLink className='text-white capitalize tracking-wide font-medium inline-block px-3 py-2' to="/About">about us</NavLink></li>
+                <li><NavLink className='text-white capitalize tracking-wide font-medium inline-block px-3 py-2' to="/Contact">contact us</NavLink></li>
             </ul>
         </div>
         <div className="authentification">
