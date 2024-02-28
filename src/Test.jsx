@@ -54,44 +54,44 @@ const Test = () => {
         <div className="flex gap-3 mb-5 mx-5 justify-between">
         <h1 className="text-primary text-[25px] uppercase font-bold">the next events</h1>
         <div className="slider_arrows flex gap-3">
-        <button className='bg-primary px-3 py-2 text-white rounded-md' onClick={previous}>
+        <button className='bg-primary px-3 py-2 text-white' onClick={previous}>
           <FaChevronLeft/>
         </button>
-        <button className='bg-primary px-3 py-2 text-white rounded-md' onClick={next}>
+        <button className='bg-primary px-3 py-2 text-white' onClick={next}>
           <FaChevronRight/>
         </button>
         </div>
         </div>
         <Slider {...settings}  ref={slider => {sliderRef = slider;}}>
        <div className="h-[350px]">
-        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full rounded-lg shadow-md border-[1px] border-light" alt="" />
+        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full border-[1px] border-primary" alt="" />
        </div>
        <div className="h-[350px]">
-        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full rounded-lg shadow-md border-[1px] border-light" alt="" />
+        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full border-[1px] border-primary" alt="" />
        </div>
        <div className="h-[350px]">
-        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full rounded-lg shadow-md border-[1px] border-light" alt="" />
+        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full border-[1px] border-primary" alt="" />
        </div>
        <div className="h-[350px]">
-        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full rounded-lg shadow-md border-[1px] border-light" alt="" />
+        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full border-[1px] border-primary" alt="" />
        </div>
        <div className="h-[350px]">
-        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full rounded-lg shadow-md border-[1px] border-light" alt="" />
+        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full shadow-md border-[1px] border-primary" alt="" />
        </div>
        <div className="h-[350px]">
-        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full rounded-lg shadow-md border-[1px] border-light" alt="" />
+        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full shadow-md border-[1px] border-primary" alt="" />
        </div>
        <div className="h-[350px]">
-        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full rounded-lg shadow-md border-[1px] border-light" alt="" />
+        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full shadow-md border-[1px] border-primary" alt="" />
        </div>
        <div className="h-[350px]">
-        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full rounded-lg shadow-md border-[1px] border-light" alt="" />
+        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full shadow-md border-[1px] border-primary" alt="" />
        </div>
        <div className="h-[350px]">
-        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full rounded-lg shadow-md border-[1px] border-light" alt="" />
+        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full shadow-md border-[1px] border-primary" alt="" />
        </div>
        <div className="h-[350px]">
-        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full rounded-lg shadow-md border-[1px] border-light" alt="" />
+        <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className="w-full shadow-md border-[1px] border-primary" alt="" />
        </div>
        </Slider>
        </div>

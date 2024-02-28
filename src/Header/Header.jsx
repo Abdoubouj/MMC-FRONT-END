@@ -18,7 +18,7 @@ const Header = () => {
             </ul>
         </div>
         <div className="authentification">
-            <a href="" className='px-7 py-3 bg-third text-white capitalize rounded-md font-bold'>sign in</a>
+            <a href="" className='px-7 py-3 bg-third text-white capitalize font-bold'>sign in</a>
         </div>
         </div>
     </header>

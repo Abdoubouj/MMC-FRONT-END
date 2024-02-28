@@ -15,9 +15,15 @@
   content: " " !important;
   width: 20px !important;
   height: 8px !important;
-  border-radius: 8px !important;
   background: #8f8f8f !important;
 }
 .slick-dots li.slick-active button::before{
   background: dodgerblue !important;
+}
+.events-container .heading{
+  background-image:linear-gradient(to right , #7eceff68,#7eceff68), url(assets/background.jpg) ;
+  background-repeat: no-repeat;
+  background-size:auto;
+  background-attachment: fixed;
+  background-position: bottom;
 }
