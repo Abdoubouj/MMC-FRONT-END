@@ -11,8 +11,8 @@ const Events = () => {
   return (
     <div className='events-container'>
         {showFilters &&
-        <div className="h-screen z-0 fixed top-0 left-0 w-full before:fixed before:content-[''] before:w-full before:h-full before:bg-slate-900 before:opacity-25 before:top-0 before:left-0">
-         <div className='filters-box fixed top-0 left-0 h-full w-[350px] opacity-100 z-20 bg-white'>
+        <div className="h-screen z-20 fixed top-0 left-0 w-full before:fixed before:content-[''] before:w-full before:h-full before:bg-slate-900 before:opacity-25 before:top-0 before:left-0">
+         <div className='filters-box fixed top-0 left-0 h-full w-[350px] opacity-100 z-30 bg-white'>
             <div className="flex justify-between items-center p-3">
                 <h2 className='text-[20px] text-primary'>Filters</h2>
             <button className='text-[20px] text-primary' onClick={()=>{setShowFilters(false)}}>
@@ -70,7 +70,7 @@ const Events = () => {
                 </button>
             </div>
             </div>
-            <div className="events-items flex flex-wrap gap-10 items-center py-5 mt-5">
+            <div className="events-items flex flex-wrap gap-10 items-center justify-center lg:justify-start lg:pb-5 lg:pt-5 pb-[190px] pt-[100px] mt-5">
                 <div className={`event-item mb-5 ${items === 3 ?'w-[350px]':'w-[260px]'}`}>
                     <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className={`w-full inline-block border-[1px] border-primary ${items === 3 ?'h-[420px]':'h-[330px]'}`} alt="" />
                     <h1 className='mt-1 font-semibold capitalize text-black'>Transformation cloud azure</h1>

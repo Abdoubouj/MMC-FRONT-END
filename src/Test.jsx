@@ -50,7 +50,7 @@ const Test = () => {
         sliderRef.slickPrev();
       };
   return (
-    <div className="slider-container max-w-[1200px] mx-auto mt-14">
+    <div className="slider-container overflow-hidden max-w-[1200px] mx-auto mt-14">
         <div className="flex gap-3 mb-5 mx-5 justify-between">
         <h1 className="text-primary text-[25px] uppercase font-bold">the next events</h1>
         <div className="slider_arrows flex gap-3">

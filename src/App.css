@@ -6,9 +6,9 @@
   font-family: "Dosis";
 }
 header a.active{
-  color: #0b5f94;
+  color: #7dc8f7;
   font-weight: 800;
-  border-bottom: 2px solid #0b5f94;
+  border-bottom: 2px solid #7dc8f7;
 }
 .upcoming_event_section{
   clip-path: polygon(50% 5%, 66% 0, 100% 0, 100% 100%, 0 100%, 0 0, 34% 0);
@@ -32,4 +32,5 @@ header a.active{
   background-attachment: fixed;
   background-position: bottom;
   /* color: #ffffffd7; */
+  /* color: #032b43c0; */
 }
