@@ -7,7 +7,6 @@ import { TfiLayoutGrid4 } from "react-icons/tfi";
 const Events = () => {
     const [showFilters , setShowFilters] = useState(false);
     const [items , setItems] = useState(4);
-    console.log(items);
   return (
     <div className='events-container'>
         {showFilters &&
