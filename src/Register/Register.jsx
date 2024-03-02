@@ -9,7 +9,6 @@ const Register = () => {
   const PASSWORD_REGEX =
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
   const userNameRef = useRef();
-  const errRef = useRef();
   const [userName, setUserName] = useState("");
   const [userNameIsFocus, setUserNameIsFocus] = useState(false);
   const [userNameIsValid, setUserNameIsValid] = useState(false);
@@ -23,10 +22,11 @@ const Register = () => {
   const [passwordIsValid, setPasswordIsValid] = useState(false);
 
   const [errMsg, setErrMsg] = useState("");
-  const [success, setSuccess] = useState(false);
-  // useEffect(() => {
-  //   userNameRef.current.focus();
-  // }, []);
+  useEffect(()=>{
+    if(window.localStorage.getItem("token")){
+      navigateTo("/",{replace:"true"});
+    }
+  },[])
   useEffect(() => {
     const res = USERNAME_REGEX.test(userName);
     setUserNameIsValid(res);

@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import loginImage from "../assets/loginImage.jpg"
-import { Link } from 'react-router-dom'
+import { Link ,useNavigate } from 'react-router-dom'
 import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
+import axios from "axios";
 const Login = () => {
+
+  const navigateTo = useNavigate();
   const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const PASSWORD_REGEX =/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
@@ -13,7 +16,11 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [passwordIsFocus, setPasswordIsFocus] = useState(false);
   const [passwordIsValid, setPasswordIsValid] = useState(false);
-
+  useEffect(()=>{
+    if(window.localStorage.getItem("token")){
+      navigateTo("/",{replace:"true"});
+    }
+  },[])
   useEffect(() => {
     const res = EMAIL_REGEX.test(email);
     setEmailIsValid(res);
@@ -23,12 +30,19 @@ const Login = () => {
     setPasswordIsValid(res);
   }, [password]);
 
-  const handleSubmit = (e)=>{
+  const BASE_URL = import.meta.env.VITE_REACT_API_URL;
+  const handleSubmit = async(e)=>{
       e.preventDefault();
       if(emailIsValid && passwordIsValid){
-        alert("success");
+         const response = await axios.post(`${BASE_URL}User/login`,{email,password});
+         const {data} = response;
+         console.log(data);
+         localStorage.setItem("token",data.token);
+         localStorage.setItem("user",JSON.stringify(data?.user));
+         navigateTo("/",{replace:true});
+         window.location.reload();
       }else{
-        alert("failed")
+        alert("invalid data");
       }
   }
 

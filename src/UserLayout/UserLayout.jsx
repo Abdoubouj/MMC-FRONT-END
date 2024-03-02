@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from "../Header/Header"
 import {Outlet} from "react-router-dom"
-const UserLayout = () => {
+const UserLayout = ({role}) => {
   return (
     <div className="user_layout">
-        <Header/>
+        <Header role={role}/>
         <Outlet/>
     </div>
   )
