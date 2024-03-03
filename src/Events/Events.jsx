@@ -1,12 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaAnglesRight } from "react-icons/fa6";
 import { RiFilter3Fill } from "react-icons/ri";
 import { TfiClose, TfiLayoutGrid3 } from "react-icons/tfi";
 import { TfiLayoutGrid4 } from "react-icons/tfi";
+import {useSelector , useDispatch} from "react-redux";
+import { getEvents } from '../features/EventSlice';
+import Loader from '../Loader/Loader';
 const Events = () => {
     const [showFilters , setShowFilters] = useState(false);
     const [items , setItems] = useState(4);
+    const dispatch = useDispatch();
+    const events = useSelector(state=>state.event.events);
+    const status = useSelector(state=>state.event.eventStatus);
+    const error = useSelector(state=>state.event.eventError);
+
+    useEffect(()=>{
+        dispatch(getEvents());
+    },[dispatch])
   return (
     <div className='events-container'>
         {showFilters &&
@@ -69,50 +80,18 @@ const Events = () => {
                 </button>
             </div>
             </div>
+            {status === "failed" &&<div className="text-red-500 p-2">{error}</div>}
+        {status === "loading" ? <Loader/> :
             <div className="events-items flex flex-wrap gap-10 items-center justify-center lg:justify-start lg:pb-5 lg:pt-5 pb-[190px] pt-[100px] mt-5">
-                <div className={`event-item mb-5 ${items === 3 ?'w-[350px]':'w-[260px]'}`}>
-                    <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className={`w-full inline-block border-[1px] border-primary ${items === 3 ?'h-[420px]':'h-[330px]'}`} alt="" />
-                    <h1 className='mt-1 font-semibold capitalize text-black'>Transformation cloud azure</h1>
-                    <h2 className='mt-1 font-normal capitalize text-slate-500'>ensa beni mellal</h2>
-                    <h3 className='mt-1 font-[500] capitalize text-primary'>12-08-2025</h3>
+                {events?.map((event)=>(
+                    <div className={`event-item mb-5 ${items === 3 ?'w-[350px]':'w-[260px]'}`} key={event.eventID}>
+                    <img src={event?.picture} className={`w-full inline-block border-[1px] border-primary ${items === 3 ?'h-[420px]':'h-[330px]'}`} alt="" />
+                    <h1 className='mt-1 font-semibold capitalize text-black'>{event?.title}</h1>
+                    <h3 className='mt-1 font-[500] capitalize text-primary'>{event?.startDate}</h3>
                 </div>
-                <div className={`event-item mb-5 ${items === 3 ?'w-[350px]':'w-[260px]'}`}>
-                    <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className={`w-full inline-block border-[1px] border-primary ${items === 3 ?'h-[420px]':'h-[330px]'}`} alt="" />
-                    <h1 className='mt-1 font-semibold capitalize text-black'>Transformation cloud azure</h1>
-                    <h2 className='mt-1 font-normal capitalize text-slate-500'>ensa beni mellal</h2>
-                    <h3 className='mt-1 font-[500] capitalize text-primary'>12-08-2025</h3>
-                </div>
-                <div className={`event-item mb-5 ${items === 3 ?'w-[350px]':'w-[260px]'}`}>
-                    <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className={`w-full inline-block border-[1px] border-primary ${items === 3 ?'h-[420px]':'h-[330px]'}`} alt="" />
-                    <h1 className='mt-1 font-semibold capitalize text-black'>Transformation cloud azure</h1>
-                    <h2 className='mt-1 font-normal capitalize text-slate-500'>ensa beni mellal</h2>
-                    <h3 className='mt-1 font-[500] capitalize text-primary'>12-08-2025</h3>
-                </div>
-                <div className={`event-item mb-5 ${items === 3 ?'w-[350px]':'w-[260px]'}`}>
-                    <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className={`w-full inline-block border-[1px] border-primary ${items === 3 ?'h-[420px]':'h-[330px]'}`} alt="" />
-                    <h1 className='mt-1 font-semibold capitalize text-black'>Transformation cloud azure</h1>
-                    <h2 className='mt-1 font-normal capitalize text-slate-500'>ensa beni mellal</h2>
-                    <h3 className='mt-1 font-[500] capitalize text-primary'>12-08-2025</h3>
-                </div>
-                <div className={`event-item mb-5 ${items === 3 ?'w-[350px]':'w-[260px]'}`}>
-                    <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className={`w-full inline-block border-[1px] border-primary ${items === 3 ?'h-[420px]':'h-[330px]'}`} alt="" />
-                    <h1 className='mt-1 font-semibold capitalize text-black'>Transformation cloud azure</h1>
-                    <h2 className='mt-1 font-normal capitalize text-slate-500'>ensa beni mellal</h2>
-                    <h3 className='mt-1 font-[500] capitalize text-primary'>12-08-2025</h3>
-                </div>
-                <div className={`event-item mb-5 ${items === 3 ?'w-[350px]':'w-[260px]'}`}>
-                    <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className={`w-full inline-block border-[1px] border-primary ${items === 3 ?'h-[420px]':'h-[330px]'}`} alt="" />
-                    <h1 className='mt-1 font-semibold capitalize text-black'>Transformation cloud azure</h1>
-                    <h2 className='mt-1 font-normal capitalize text-slate-500'>ensa beni mellal</h2>
-                    <h3 className='mt-1 font-[500] capitalize text-primary'>12-08-2025</h3>
-                </div>
-                <div className={`event-item mb-5 ${items === 3 ?'w-[350px]':'w-[260px]'}`}>
-                    <img src="https://moroccomicrosoftcommunity.com/img/microsoft/Microsoft-tech-day-2024-1/big.jpg" className={`w-full inline-block border-[1px] border-primary ${items === 3 ?'h-[420px]':'h-[330px]'}`} alt="" />
-                    <h1 className='mt-1 font-semibold capitalize text-black'>Transformation cloud azure</h1>
-                    <h2 className='mt-1 font-normal capitalize text-slate-500'>ensa beni mellal</h2>
-                    <h3 className='mt-1 font-[500] capitalize text-primary'>12-08-2025</h3>
-                </div>
+                    ))}
             </div>
+}
         </div>
     </div>
   )

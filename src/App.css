@@ -6,12 +6,19 @@
   font-family: "Dosis";
 }
 header a.active{
-  color: #7dc8f7;
+  color: #ffffff;
   font-weight: 800;
-  border-bottom: 2px solid #7dc8f7;
+  border-bottom: 2px solid #fff;
 }
-.upcoming_event_section{
-  clip-path: polygon(50% 5%, 66% 0, 100% 0, 100% 100%, 0 100%, 0 0, 34% 0);
+.dashboard-items a.active{
+  border-right: 4px solid #0B85FF;
+}
+.dashboard-items a.active span:nth-child(1){
+  border: 1px solid #0B85FF;
+  color: #0B85FF;
+}
+.dashboard-items a.active span:nth-child(2){
+   color: #0B85FF;
 }
 .slick-slide >div{
   margin: 0 20px 20px 20px;
@@ -34,3 +41,45 @@ header a.active{
   /* color: #ffffffd7; */
   /* color: #032b43c0; */
 }
+
+
+
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border: 4.5px solid #0000;
+  border-radius: 50%;
+  border-color: #dbdcef #0000;
+  animation: spinner-e04l1k 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2.2px;
+  border: inherit;
+  border-radius: 50%;
+}
+
+.spinner::before {
+  border-color: #0B85FF #0000;
+  animation: inherit;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+
+.spinner::after {
+  margin: 8.9px;
+}
+
+@keyframes spinner-e04l1k {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+
+
