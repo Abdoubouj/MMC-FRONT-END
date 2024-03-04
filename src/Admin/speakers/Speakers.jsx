@@ -91,16 +91,18 @@ const Speakers = () => {
                 <div className="text-left">{speaker.speakerID}</div>
               </td>
               <td className="p-2 whitespace-nowrap">
-                <div className="text-left">{speaker.picture}</div>
+                <div className="text-left">
+                  <img src={speaker.picture} width={50} alt="" />
+                  </div>
               </td>
               <td className="p-2 whitespace-nowrap">
-                <div className="text-left">{speaker.MCT}</div>
+                <div className="text-left">{speaker.mct ? "true":"false"}</div>
               </td>
               <td className="p-2 whitespace-nowrap">
-                <div className="text-left">{speaker.MVP}</div>
+                <div className="text-left">{speaker.mvp ? "true":"false"}</div>
               </td>
               <td className="p-2 whitespace-nowrap">
-                <div className="text-left">{speaker.biography}</div>
+                <div className="text-left">{speaker.biography?.substring(0,40)}...</div>
               </td>
               <td className="p-2 whitespace-nowrap">
                 <div className="text-left text-primary text-[23px] flex gap-5">

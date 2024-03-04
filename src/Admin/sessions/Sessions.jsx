@@ -18,7 +18,7 @@ const Sessions = () => {
 
     const handleDelete = (sessionId)=>{
        confirm("are you sure to delete");
-       dispatch(deleteSession(sessionId));
+       dispatch(deleteSession(sessionId)).then(()=>dispatch(getSessions()));
        navigateTo("/admin/Sessions",{replace:true});
     }
   return (

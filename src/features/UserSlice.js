@@ -2,6 +2,7 @@ import {createAsyncThunk , createSlice} from "@reduxjs/toolkit";
 import axios from "axios"
 const BASE_URL = import.meta.env.VITE_REACT_API_URL;
 export const getUsers = createAsyncThunk("user/getUsers",async()=>{
+  console.log(localStorage.getItem("token"));
     const response = await axios.get(`${BASE_URL}User`,{
         headers:{
             Authorization: `Bearer ${localStorage.getItem("token")}`,

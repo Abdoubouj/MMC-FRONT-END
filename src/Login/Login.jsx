@@ -34,11 +34,11 @@ const Login = () => {
   const handleSubmit = async(e)=>{
       e.preventDefault();
       if(emailIsValid && passwordIsValid){
-         const response = await axios.post(`${BASE_URL}User/login`,{email,password});
+         const response = await axios.post(`${BASE_URL}User/Login`,{userEmail:email,userPassword:password});
          const {data} = response;
          console.log(data);
          localStorage.setItem("token",data.token);
-         localStorage.setItem("user",JSON.stringify(data?.user));
+         localStorage.setItem("user",JSON.stringify({id:data?.userID , role:data?.userStatus}));
          navigateTo("/",{replace:true});
          window.location.reload();
       }else{

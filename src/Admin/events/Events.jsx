@@ -14,7 +14,8 @@ const Events = () => {
     useEffect(()=>{
         dispatch(getEvents());
     },[dispatch])
-    console.log(events);
+    console.log(status);
+    console.log(error);
 
     const handleDelete = (eventId)=>{
        confirm("are you sure to delete");
@@ -59,7 +60,7 @@ const Events = () => {
         </div>
          */}
       {status === "loading" &&<div className="h-[400px] w-full flex items-center justify-center"><Loader/></div>}
-      {status === "failed" &&<div className="text-red-500 p-2">{error}</div>}
+      {error &&<div className="text-red-500 p-2">{error}</div>}
       {status === "succeded" && 
         <table className="table-auto mt-5 w-full">
           <thead className="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
